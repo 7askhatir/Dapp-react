@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   constructor(props) {
-    this.loadBlockchainData()
     super(props)
     this.state = {
       
