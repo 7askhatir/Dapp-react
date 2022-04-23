@@ -10,6 +10,7 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
+    console.log("cccccccccccccccccccc");
     const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
     const accounts = await web3.eth.getAccounts()
     console.log(accounts);
@@ -35,10 +36,11 @@ class App extends Component {
   }
 
   constructor(props) {
+    this.loadBlockchainData()
     super(props)
     this.state = {
       
-      name: ''
+      name: 'test'
     }
 }
   //   this.createTask = this.createTask.bind(this)
