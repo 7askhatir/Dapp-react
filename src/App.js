@@ -13,11 +13,16 @@ class App extends Component {
     const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
     const accounts = await web3.eth.getAccounts()
     console.log(accounts);
+    console.log("test1");
     this.setState({ account: accounts[0] })
+    console.log("test2");
      const salaryParametre = new web3.eth.Contract(TODO_LIST_ABI, TODO_LIST_ADDRESS);
+     console.log("test3");
     // this.setState({ todoList })
     const tokenName =await salaryParametre.methods.name().call();
+    console.log("test4");
     this.setState({ name:tokenName });
+    console.log("test5");
     // const taskCount = await todoList.methods.taskCount().call()
     // this.setState({ taskCount })
     // for (var i = 1; i <= taskCount; i++) {
